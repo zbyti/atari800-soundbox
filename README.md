@@ -1,6 +1,6 @@
 # atari800-soundbox
 
-Atari800 SoundBox emulator based on [Atari800](https://atari800.github.io/) version 4.1.0.
+Atari800 SoundBox emulator based on [Atari800](https://atari800.github.io/) 4.1.0.
 
 Various soundcards implementations done by [Mono](http://mono.i-demo.pl/).
 
@@ -10,7 +10,7 @@ Various soundcards implementations done by [Mono](http://mono.i-demo.pl/).
 
 ### [reSID](http://www.zimmers.net/anonftp/pub/cbm/crossplatform/emulators/resid/index.html)
 
-Download [resid-0.16.tar.gz](http://www.zimmers.net/anonftp/pub/cbm/crossplatform/emulators/resid/resid-0.16.tar.gz) or install from `libs/resid`.
+Download [resid-0.16.tar.gz](http://www.zimmers.net/anonftp/pub/cbm/crossplatform/emulators/resid/resid-0.16.tar.gz) or install from `libs/resid`
 
 ```bash
 $ ./configure
@@ -20,7 +20,7 @@ $ sudo make install
 
 ### [libayemu](https://github.com/asashnov/libayemu)
 
-Clone linked repository or install from `libs/libayemu`.
+Clone linked repository or install from `libs/libayemu`
 
 ```bash
 $ ./configure
@@ -52,7 +52,7 @@ or
 ```bash
 $ ./configure-everything.sh
 $ make
-$ make install
+$ sudo make install
 ```
 
 ![](screen01.png)
