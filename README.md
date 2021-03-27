@@ -30,7 +30,7 @@ $ sudo make install
 
 If you cloned linked repo please follow the instructions provided with the repository.
 
-## Compilatioin Atari800 SoundBox
+## Compilation Atari800 SoundBox
 
 ```bash
 $ ./configure \
