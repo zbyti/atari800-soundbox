@@ -1,0 +1,15 @@
+#! /bin/sh
+
+set -x
+set -e
+
+if [ ! -f ChangeLog ] ; then
+  # automaticaly generate ChangeLog file from CVS log
+  cvs2cl
+fi
+
+libtoolize
+aclocal
+autoheader
+automake --add-missing --include-deps --copy
+autoconf

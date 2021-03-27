@@ -1,0 +1,289 @@
+2008-05-18 16:18  sashnov
+
+	* Makefile.am: minor: new file in source archive: vtx file format
+	  description
+
+2008-05-18 16:18  sashnov
+
+	* src/lh5dec.c: minor: turn off debug output
+
+2008-05-18 15:45  sashnov
+
+	* configure.in, debian/changelog, debian/control, debian/dirs,
+	  debian/files, debian/libayemu1.install, debian/rules,
+	  src/Makefile.am: update debian package build
+
+2008-05-18 14:37  sashnov
+
+	* bootstrap, debian/rules, include/ayemu.h, include/ayemu_8912.h,
+	  include/ayemu_vtxfile.h, src/ay8912.c, src/lh5dec.c,
+	  src/vtxfile.c: MAJOR API change: source from memory, not from
+	  filename (it allow to easy port libayemu to Palm and other exotic
+	  platform)
+
+2007-02-28 08:45  sashnov
+
+	* vtx_format.txt: add VTX file format description (Found in AyEmul:
+	  http://bulba.at.kz/emulator_e.htm)
+
+2007-02-09 14:29  sashnov
+
+	* Makefile.am, README, bootstrap, configure.in, debian/files,
+	  debian/libayemu-dev.install, debian/libayemu1.install,
+	  debian/rules, src/Makefile.am: fix compilation with new autoconf
+	  and automake Package to debian package still broken but updated
+
+2006-07-03 10:33  sashnov
+
+	* debian/control: fix library section
+
+2006-01-31 14:51  sashnov
+
+	* debian/libayemu1.docs: add Changlog to documentation of binary
+	  Debian package
+
+2006-01-31 14:48  sashnov
+
+	* NEWS: update NEWS file
+
+2006-01-31 14:47  sashnov
+
+	* TODO: upload to sf.net, doxygen doc, rpm and deb - done- removed
+
+2006-01-31 14:42  sashnov
+
+	* README: remove section about installation
+
+2006-01-31 14:31  sashnov
+
+	* debian/: dirs, docs, files: add other deb_helper files
+
+2006-01-31 14:30  sashnov
+
+	* debian/: rules, libayemu-dev.docs: add doxygen documentation to
+	  devel package
+
+2006-01-31 09:02  sashnov
+
+	* debian/: libayemu-dev.install, libayemu1.install: commit filelist
+	  for packages
+
+2006-01-31 09:01  sashnov
+
+	* debian/rules: use dh_install
+
+2006-01-30 18:03  sashnov
+
+	* debian/: README.Debian, changelog, control, copyright, rules:
+	  start debian package support
+
+2006-01-24 17:41  sashnov
+
+	* include/ayemu_8912.h: minor reformation
+
+2006-01-24 17:40  sashnov
+
+	* include/ayemu_vtxfile.h, src/vtxfile.c: remove pos; change
+	  ayemu_vtx_get_next_frame to ayemu_vtx_getframe
+
+2006-01-24 17:37  sashnov
+
+	* include/ayemu.h: add main page for doxygen doc
+
+2005-11-28 18:07  sashnov
+
+	* include/ayemu_8912.h, include/ayemu_vtxfile.h, src/vtxfile.c: fix
+	  compile under VC6
+
+2005-10-17 09:16  sashnov
+
+	* libayemu.spec: more short description of package
+
+2005-10-17 09:14  sashnov
+
+	* Makefile.am: remove test dir, add RELEASENOTES file to dist
+
+2005-10-17 09:13  sashnov
+
+	* README: review text
+
+2005-10-17 09:12  sashnov
+
+	* configure.in: remove test/Makefile
+
+2005-10-17 09:11  sashnov
+
+	* RELEASENOTES: add release notes to cvs
+
+2005-10-17 09:09  sashnov
+
+	* src/test.c: move test.c from test dir
+
+2005-10-17 09:08  sashnov
+
+	* src/Makefile.am: add check programm, CFLAGS+= -Wall
+
+2005-10-17 09:07  sashnov
+
+	* src/ay8912.c: fix return value after check_magic() calls (return
+	  0 instead simple return)
+
+2005-10-17 09:06  sashnov
+
+	* src/vtxfile.c: include ctype.h for tolower() declaration
+
+2005-09-30 12:01  sashnov
+
+	* ChangeLog: remove ChangeLog from CVS (it will generate by cvs2ch
+	  utility
+
+2005-09-30 11:57  sashnov
+
+	* src/Makefile.am: inject library release in library filename
+
+2005-09-30 11:56  sashnov
+
+	* configure.in: AM_PROG_LIBTOOL is need?
+
+2005-09-22 14:41  sashnov
+
+	* libayemu.spec: start separate to lib and devel packages (not
+	  working yet)
+
+2005-09-16 09:21  sashnov
+
+	* src/vtxfile.c: reindent source
+
+2005-09-16 08:59  sashnov
+
+	* src/ay8912.c: start documenting functions in doxygen format
+
+2005-09-16 08:53  sashnov
+
+	* include/: ayemu_8912.h, ayemu_vtxfile.h: document all structures
+	  members in doxygen format
+
+2005-09-16 08:51  sashnov
+
+	* Doxyfile: correct doxygen config
+
+2005-09-16 08:50  sashnov
+
+	* configure.in: change libayemu version 0.9.0 => 0.9.5
+
+2005-09-16 08:38  sashnov
+
+	* AUTHORS: reformat text
+
+2005-09-12 09:21  sashnov
+
+	* src/vtxfile.c: correct ayemu_vtx_sprintname(); increase checking
+	  for errors
+
+2005-09-12 09:17  sashnov
+
+	* src/ay8912.c: fix set_regs (correct braces in tone_a = regs[0] +
+	  ...); remove ayemu_start()- make transparent check for default
+	  parametrs;
+
+2005-09-12 09:14  sashnov
+
+	* include/ayemu_vtxfile.h: ayemu_vtx_sprintname(): _const_
+	  ayemu_vtx_t *vtx
+
+2005-09-12 09:09  sashnov
+
+	* include/ayemu_8912.h: add magic field (for ensure struct
+	  initialized)
+
+2005-09-05 09:14  sashnov
+
+	* Makefile.am: Add bootstrap to distribution
+
+2005-09-05 09:09  sashnov
+
+	* include/ayemu.h, include/ayemu_8912.h, src/ay8912.c,
+	  src/vtxfile.c: Major library interface changes, code refract
+
+2005-05-25 14:20  sashnov
+
+	* include/ayemu_8912.h, src/vtxfile.c: minor compilation fixes
+
+2005-05-16 10:48  sashnov
+
+	* Makefile.am, include/ayemu.h, include/ayemu_8912.h,
+	  include/ayemu_vtxfile.h, src/ay8912.c, src/lh5dec.c,
+	  src/vtxfile.c: reforactoring, reformat, some wrapp to macros
+
+2005-02-18 13:33  sashnov
+
+	* src/vtxfile.c, src/ay8912.c, include/ayemu_vtxfile.h,
+	  include/ayemu_8912.h: void * to char * as general pointer type
+	  (ANSI C), remove spaces between * and variable name in pointer
+	  declarations (int *p mimics than *p can be used the same int)
+
+2005-02-11 11:42  sashnov
+
+	* Makefile.am, libayemu.spec: minor changes in build files
+
+2005-02-10 13:02  sashnov
+
+	* libayemu.spec: All library in one rpm file
+
+2005-02-08 14:28  sashnov
+
+	* src/: lh5dec.c, vtxfile.c: Replace lh5dec.c for more portable,
+	  quite original version
+
+2005-02-08 14:27  sashnov
+
+	* configure.in: Oops, main Makefile forgot. Fixed
+
+2005-02-01 17:47  sashnov
+
+	* TODO: update TODO list
+
+2005-01-31 11:17  sashnov
+
+	* src/ay8912.c: improve parametr checking in ayemu_set_chip()
+
+2005-01-20 10:40  sashnov
+
+	* BUGS, ChangeLog, Doxyfile, include/ayemu_8912.h,
+	  include/ayemu_vtxfile.h, src/ay8912.c: Changes in internal
+	  ayemu_ay_t, documentation corrections (i.e. doxygen comments)
+
+2005-01-19 13:24  sashnov
+
+	* Doxyfile: Start use Doxygen
+
+2005-01-19 13:22  sashnov
+
+	* src/vtxfile.c: minor code reindent
+
+2005-01-13 09:10  sashnov
+
+	* AUTHORS, README, TODO: rewrite README, small changes in TODO and
+	  AUTHORS files
+
+2004-12-07 14:52  sashnov
+
+	* Makefile.am, README, TODO, configure.in: Writting README, add
+	  install headers to configure.in
+
+2004-12-03 12:48  sashnov
+
+	* AUTHORS, BUGS, Makefile.am, NEWS, README, THANKS, TODO,
+	  configure.in, COPYING, ChangeLog, INSTALL, bootstrap,
+	  include/Makefile.am, include/ayemu.h, include/ayemu_8912.h,
+	  include/ayemu_vtxfile.h, src/Makefile.am, src/ay8912.c,
+	  src/lh5dec.c, src/vtxfile.c: Initial commit
+
+2004-12-03 12:48  sashnov
+
+	* AUTHORS, BUGS, Makefile.am, NEWS, README, THANKS, TODO,
+	  configure.in, COPYING, ChangeLog, INSTALL, bootstrap,
+	  include/Makefile.am, include/ayemu.h, include/ayemu_8912.h,
+	  include/ayemu_vtxfile.h, src/Makefile.am, src/ay8912.c,
+	  src/lh5dec.c, src/vtxfile.c: Initial revision
+
