@@ -2,7 +2,7 @@
 
 Atari800 SoundBox emulator based on [Atari800](https://atari800.github.io/) 4.1.0.
 
-Various soundcards implementations done by [Mono](http://mono.i-demo.pl/).
+Various sound chips implementations done by [Mono](http://mono.i-demo.pl/).
 
 ---
 
